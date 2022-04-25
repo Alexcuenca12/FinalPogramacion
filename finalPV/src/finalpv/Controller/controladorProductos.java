@@ -288,7 +288,7 @@ public class controladorProductos {
     private void imprimirReporte() {
         ConectionPg conexion = new ConectionPg();
         try {
-            JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/Vista/Reportes/reportePrueba.jasper"));
+            JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/Reportes/reportePrueba.jasper"));
 
             JasperPrint jp = JasperFillManager.fillReport(jr, null, conexion.getCon()); //cargado el reporte con los datos de la bd
             JasperViewer jv = new JasperViewer(jp);
